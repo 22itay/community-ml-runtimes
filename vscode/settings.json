@@ -1,0 +1,7 @@
+{
+    "workbench.colorTheme": "Default Dark Modern",
+    "security.workspace.trust.startupPrompt": "never",
+    "security.workspace.trust.enabled": false,
+    "security.workspace.trust.banner": "never",
+    "security.workspace.trust.emptyWindow": false
+}

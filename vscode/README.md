@@ -2,16 +2,15 @@
 
 # VsCode for ML runtimes
 
-docker build -t <my docker repos>/vscode:2023.08.1 . -f Dockerfile-runtime-pbj-python310
 
-CML Build based on "docker.repository.cloudera.com/cdsw/ml-runtime-workbench-python3.7-standard:2021.09.1-b5" uploaded on : 
+docker build -t <my docker repos>/vscode:<TAG> . -f Dockerfile-vscode
 
-   ghcr.io/oliviermeignan/vscode:2022.03.1
+An prebuilt version is available on : docker.io/22adc/ml_runtime_vscode:2025.01.1
 
-CML Build based on "docker.repository.cloudera.com/cloudera/cdsw/ml-runtime-pbj-workbench-python3.10-standard:2023.05.2-b7" available here:
+the docker file expose 3 main argument with defualt value:
 
-   ghcr.io/ogakulov/vscode:2023.08.1
+ARG ML_RUNTIME_BASE_VERSION=2025.01.3-b8
+ARG ML_RUNTIME_WORKBENCH_TYPE=python3.10-standard
+ARG VSCODE_SERVER_VERSION=4.99.3
 
-# Vscode for  CDSW Engine
-
-docker push  <my docker repos>/vscode:2022.03.1
+feel free to override them with `--build-arg` or edit them directly in the docker file.
