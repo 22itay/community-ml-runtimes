@@ -1,4 +1,6 @@
-FROM docker.repository.cloudera.com/cloudera/cdsw/ml-runtime-jupyterlab-python3.9-standard:2021.12.1-b17
+ARG ML_RUNTIME_BASE_VERSION=2025.01.3-b8
+ARG ML_RUNTIME_WORKBENCH_TYPE=python3.10-standard
+FROM docker.repository.cloudera.com/cloudera/cdsw/ml-runtime-jupyterlab-${ML_RUNTIME_WORKBENCH_TYPE}:${ML_RUNTIME_BASE_VERSION}
 
 USER root
 
@@ -7,6 +9,8 @@ RUN apt-get update && apt-get upgrade -y && apt-get clean && rm -rf /var/lib/apt
 
 # Add the packages you want to include in this runtime
 # RUN pip install
+
+USER cdsw
 
 # Override Runtime label and environment variables metadata
 ENV ML_RUNTIME_EDITION="ML Runtime with JupyterLab Edition" \
