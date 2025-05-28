@@ -43,8 +43,8 @@
 ## you can find updated version at 
 ## https://archive.cloudera.com/ml-runtimes/latest/artifacts/repo-assembly.json
 ARG ML_RUNTIME_BASE_VERSION=2025.01.3-b8
-ARG ML_RUNTIME_WORKBENCH_TYPE=python3.10-standard
-ARG VSCODE_SERVER_VERSION=4.99.3
+ARG ML_RUNTIME_WORKBENCH_TYPE=python3.12-standard
+ARG VSCODE_SERVER_VERSION=4.100.2
 
 
 # Start with a Base CML Runtime & upgrade
